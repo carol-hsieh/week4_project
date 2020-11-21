@@ -1,0 +1,200 @@
+/* header 導覽 */
+
+.navMenu{
+    background-color: $primary-bg-color;
+    padding: 30px 88px;
+    align-items: center;
+    ul a {
+        padding: 8px 32px;
+        &:hover {
+            background-color:$secondary-bg-color;
+        }
+    }    
+    @include pad{
+        padding:30px 39px;
+        ul a {
+            padding: 8px 20px;
+        }
+    
+    }
+    @include mobile{
+        padding:0px;
+        .logo{
+            width: 48px;
+            margin: auto;
+            padding-top: 10px;
+            padding-bottom:10.48px ;
+        }
+        ul{
+            width: 100%;
+        }
+        li{
+            width: 50%;
+            border:1px solid #fff;
+            text-align: center;
+        }
+        li a{
+            padding:8px;
+        }
+        }   
+     
+
+}
+/* footer  */
+
+.footer{
+    background-color: $primary-bg-color;
+    .footerTop{
+        border-bottom: 1px solid #fff;
+        margin-bottom:24px;
+        }
+        
+        .footerNav{
+                padding-top: 48px;
+                align-items: center;
+                margin-bottom: 18px;
+        }
+        .footerMenu a{
+                padding-right: 48px;
+                &:hover {
+                    color:pink;
+                }
+        }
+     @include pad{
+        .container{
+            max-width: 690px;
+        } 
+        .footerTop{
+            margin-bottom: 18px;
+        }
+        
+        .footerNav{
+            padding-top: 40px;
+            margin-bottom: 24px;
+            }
+        .footerMenu a{
+                padding-right: 24px;
+        } 
+        .footerIcon{
+            img{
+                width: 24px;
+            }
+        } 
+        @include mobile{
+            .container{
+                max-width: 345px;
+            } 
+            .footerTop{
+                display: flex;
+                flex-direction: row-reverse;
+                justify-content: space-between;
+            }
+            .footerNav{
+                align-self: flex-start;
+                padding-top: 24px;
+                }
+            .footerMenu{
+                display: none;
+            }
+        }
+   
+     }  
+        .info{
+            img{
+                width: 44px;
+                margin-right: 17px;
+            }
+            h3{
+                font-size: $h3-font-size;
+            }
+            li{
+                margin-bottom: 19px;
+            }
+            @include pad{
+                img{
+                    width: 24px;
+                    margin-right: 12px;
+                }
+                h3{
+                    font-size: $font-size-base*1.25;
+                }
+                li{
+                    margin-bottom: 8px;
+                }
+
+            }
+            @include mobile{
+                .tel{
+                    padding-top: 24px;
+                }
+                h3{
+                    font-size: $font-size-base*0.875;
+                }
+                img{
+                    width: 20px;
+                }
+                
+            }
+        }
+        .copyright{
+            color:$secondary-word-color;
+            padding-bottom: 28.43px;
+            .ft-logo{
+                margin-right: 38px;
+            }
+            li{
+                padding-left: 62px;
+                a:hover{
+                    color:pink;
+                }
+            }
+            .cb-logo{
+                display: none;
+            }
+            @include pad{
+                .logo{
+                    display: none;
+                }
+                a{
+                       display: none;
+                }
+                li{
+                    padding-left: 24px;
+                }
+                ul a{
+                    display: block;
+                }
+            }
+        @include mobile{
+             padding-bottom: 20px;
+                .ft-logo{
+                    display: none;
+                    width: 46px;
+                }
+
+                .copyright_content{
+                    flex-direction: column;
+                }
+                p,.privacy{
+                    font-size:$font-size-base*0.875;
+                    margin-bottom: 7px;
+                }
+                ul{
+                    flex-direction: column;
+                    position: relative;
+                }
+                li{
+                    // position: relative;
+                    padding-left: 0;
+                    margin-bottom: 8px;
+                }
+                .cb-logo{
+                    display: block;
+                    position: absolute;;
+                    width: 46px;
+                    left: 300px;
+                    bottom: 0px;
+                }
+            }
+        }    
+}
